@@ -37,6 +37,7 @@ echo "Installing backend packages..."
 npm install
 
 if [ ! -f db/users.json ]; then
+    mkdir db
     createUsersJson
 else
     echo "users.json already exists."
