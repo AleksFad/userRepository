@@ -1,6 +1,7 @@
 import React from 'react';
 import { AxiosError } from 'axios';
 import instance from '../../config/axiosConfig';
+import { useTranslation } from 'react-i18next';
 
 interface DeleteUserButtonProps {
     userId: number;
@@ -9,6 +10,7 @@ interface DeleteUserButtonProps {
 }
 
 const DeleteUserButton: React.FC<DeleteUserButtonProps> = ({ userId, onUserDeleted, disabled }) => {
+    const { t } = useTranslation();
     const token = localStorage.getItem('token');
     const handleDelete = async () => {
         if (window.confirm('Are you sure you want to delete this user?')) {
@@ -29,7 +31,7 @@ const DeleteUserButton: React.FC<DeleteUserButtonProps> = ({ userId, onUserDelet
     };
 
     return (
-        <button onClick={handleDelete} disabled={disabled}>Delete User</button>
+        <button onClick={handleDelete} disabled={disabled}>{t('deleteUser')}</button>
     );
 };
 

@@ -12,5 +12,11 @@
   "addUser": "Add User",
   "myDetails": "My details",
   "logoutMenu": "Logout",
-  "loginFailed": "Login failed. Please check the credentials or confirm your account via email."
+  "loginFailed": "Login failed. Please check the credentials or confirm your account via email.",
+  "deleteUser": "Delete user",
+  "userData": "User data",
+  "userLoginHistory": "User Login History",
+  "previous": "Previous",
+  "next": "Next",
+  "paginationInfo": "Page {{page}} of {{totalPages}}"
 }

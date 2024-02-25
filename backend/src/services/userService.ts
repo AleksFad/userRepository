@@ -1,6 +1,7 @@
 import { User } from '../models/User';
 import fs from 'fs';
 import path from 'path';
+import i18n from '../i18n';
 
 export class UserService {
     private static readonly usersFilePath = path.resolve(__dirname, '../../db/', 'users.json');
@@ -16,7 +17,7 @@ export class UserService {
             return { users, totalPages };
         } catch (error) {
             console.error('Error fetching paginated users:', error);
-            throw error;
+            throw new Error(i18n.t('user.fetchError' as string));
         }
     }
 
@@ -33,7 +34,7 @@ export class UserService {
             return { user };
         } catch (error) {
             console.error('Error fetching paginated users:', error);
-            throw error;
+            throw new Error(i18n.t('user.fetchIdError' as string));
         }
     }
 
@@ -51,7 +52,7 @@ export class UserService {
             return true;
         } catch (error) {
             console.error('Error deleting user:', error);
-            throw error;
+            throw new Error(i18n.t('user.fetchIdError'));
         }
     }
 }

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import instance from '../../config/axiosConfig';
+import { useTranslation } from 'react-i18next';
 
 interface UserFormProps {
     isRegistration?: boolean;
 }
 
 const UserForm: React.FC<UserFormProps> = ({ isRegistration = false }) => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [message, setMessage] = useState<string>("");
@@ -28,23 +30,23 @@ const UserForm: React.FC<UserFormProps> = ({ isRegistration = false }) => {
 
     return (
         <div>
-            <h2>{isRegistration ? "Register" : "Add User"}</h2>
+            <h2>{isRegistration ? t('register') : t('addUser')}</h2>
             <form onSubmit={handleSubmit}>
                 <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email"
+                    placeholder={t('email')}
                     required
                 />
                 <input
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
+                    placeholder={t('password')}
                     required
                 />
-                <button type="submit">{isRegistration ? "Register" : "Add User"}</button>
+                <button type="submit">{isRegistration ? t('register') : t('addUser')}</button>
             </form>
             {message && <p>{message}</p>}
         </div>

@@ -12,11 +12,11 @@ const Registration: React.FC = () => {
         e.preventDefault();
         try {
             const response = await instance.post<{ message: string }>("/auth/register", {
-                email,  // Update to use 'email' instead of 'username'
+                email,
                 password,
             });
             setMessage(response.data.message);
-        } catch (error: any) { // Explicitly type 'error' as 'any'
+        } catch (error: any) {
             console.error("Registration failed:", error.response?.data.error);
             setMessage(error.response?.data.error || "An unexpected error occurred.");
         }

@@ -3,7 +3,6 @@ import { User } from '../models/User';
 import { renderEmailTemplate } from '../utils/emailTemplate';
 import i18n from '../i18n';
 
-
 export class EmailService {
     private static getPostmarkClient() {
         const postmark = require('postmark');

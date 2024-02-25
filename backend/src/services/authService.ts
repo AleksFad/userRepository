@@ -111,21 +111,21 @@ export class AuthService {
 
     static async createUser(email: string, password: string): Promise<{ newUser: User | null, error?: string }> {
         if (!validateEmail(email)) {
-            return { newUser: null, error: i18n.t('auth.invalidEmailFormat') };
+            return { newUser: null, error: i18n.t('auth.invalidEmailFormat') as string };
         }
 
         if (!validatePassword(password)) {
-            return { newUser: null, error: i18n.t('auth.passwordShort') };
+            return { newUser: null, error: i18n.t('auth.passwordShort') as string };
         }
 
         const existingUser = await this.isExistingUser(email);
         if (existingUser) {
-            return { newUser: null, error: i18n.t('auth.emailExist') };
+            return { newUser: null, error: i18n.t('auth.emailExist') as string };
         }
 
         const newUser = await this.register({ email, password });
         if (!newUser) {
-            return { newUser: null, error: i18n.t('auth.failedCreate') };
+            return { newUser: null, error: i18n.t('auth.failedCreate') as string };
         }
 
         await EmailService.sendGreetingEmail(newUser);

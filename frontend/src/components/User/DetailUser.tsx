@@ -1,7 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import instance from '../../config/axiosConfig';
+import { useTranslation } from 'react-i18next';
 
 const DetailUser = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState<string | null>(null);
     const [lastLogins, setLastLogins] = useState<string[] | null>(null);
 
@@ -30,10 +32,10 @@ const DetailUser = () => {
             {email && (
                 <Fragment>
                     <div>
-                        <h2>User Data</h2>
-                        <p>Email: {email}</p>
+                        <h2>{t('userData')}</h2>
+                        <p>{t('email')}: {email}</p>
                     </div>
-                    <h2>User Login History</h2>
+                    <h2>{t('userLoginHistory')}</h2>
                     <ul>
                         {lastLogins && lastLogins.map((login: string, index: number) => (
                             <li key={index}>{login}</li>

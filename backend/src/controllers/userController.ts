@@ -3,6 +3,7 @@ import { Request, Response } from 'express';
 import { AuthService } from '../services/authService';
 import { EmailService } from '../services/emailService';
 import i18n from '../i18n';
+import { sendErrorResponse } from '../utils/errorHandler';
 
 export class UserController {
     static async getUserList(req: Request, res: Response): Promise<void> {
@@ -21,7 +22,7 @@ export class UserController {
             res.status(200).json({ users, totalPages, userId });
         } catch (error) {
             console.error('Error fetching paginated users:', error);
-            res.status(500).json({ error: i18n.t('user.internalServerError') });
+            sendErrorResponse(res, 500, 'user.internalServerError', 'Internal Server Error');
         }
     }
 
@@ -40,7 +41,7 @@ export class UserController {
             return;
         } catch (error) {
             console.error('Error registering user:', error);
-            res.status(500).json({ error: i18n.t('user.internalServerError') });
+            sendErrorResponse(res, 500, 'user.internalServerError', 'Internal Server Error');
         }
     }
 
@@ -60,7 +61,7 @@ export class UserController {
             res.status(200).json({ email: result.user.email, lastLogins: result.user.lastLogins });
         } catch (error) {
             console.error('Error fetching user data and logins:', error);
-            res.status(500).json({ error: i18n.t('user.internalServerError') });
+            sendErrorResponse(res, 500, 'user.internalServerError', 'Internal Server Error');
         }
     }
 
@@ -83,7 +84,7 @@ export class UserController {
             res.status(200).send({ message: i18n.t('user.userDeletedSuccessfully') });
         } catch (error) {
             console.error('Error deleting user:', error);
-            res.status(500).send({ message: i18n.t('user.internalServerError') });
+            sendErrorResponse(res, 500, 'user.internalServerError', 'Internal Server Error');
         }
     }
 }

@@ -1,16 +1,45 @@
 {
-  "login": "Logi sisse",
-  "email": "E-post",
-  "password": "Parool",
-  "logout": "Login välja",
-  "recover": "Taasta parool",
-  "register": "Registreeri",
-  "validatingEmail": "Kontrollin sinu e-post...",
-  "validateSuccess": "Sinu e-post oli kontrollitud! Proovi autoriseerida.",
-  "validateFail": "E-posti kontroll feilis. Viide on vale või expired.",
-  "userList": "Kasutaja list",
-  "addUser": "Lisa kasutaja",
-  "myDetails": "Minu konto",
-  "logoutMenu": "Logi välja",
-  "loginFailed": "Login failed. Palun valideerri e-post ja parool või kontrolli oma e-post."
+  "login": {
+    "failed": "Sisselogimine ebaõnnestus. Kontrollige mandaate või kinnitage oma konto meili teel.",
+    "internalServerError": "Serveri sisemine viga"
+  },
+  "register": {
+    "success": "Kasutaja registreerimine õnnestus. Vaadake postkasti ja kinnitage oma konto.",
+    "internalServerError": "Serveri sisemine viga"
+  },
+  "recover":{
+    "notfound": "Kasutajat ei leitud",
+    "sent": "Parooli taastamise meil on saadetud",
+    "internal": "Serveri sisemine viga"
+  },
+  "validate": {
+    "tokenrequired": "Token on nõutav",
+    "success": "Kasutaja valideerimine õnnestus",
+    "invalid": "Kehtetu token"
+  },
+  "user": {
+    "idMissing": "Kasutaja ID puudub",
+    "userNotFound": "Kasutajat ei leitud",
+    "userAddedSuccess": "Kasutaja lisamine õnnestus.",
+    "userDeletedSuccess": "Kasutaja kustutamine õnnestus",
+    "internalServerError": "Serveri sisemine viga",
+    "userAddedSuccessfully": "Kasutaja lisamine õnnestus.",
+    "userDeletedSuccessfully": "Kasutaja kustutamine õnnestus",
+    "userWithEmailExists": "Selle e-posti aadressiga kasutaja on juba olemas",
+    "fetchIdError": "Viga kasutaja toomisel"
+  },
+  "auth": {
+    "accessDenied": "Ligipääs keelatud. Palun logige sisse.",
+    "noTokenProvided": "Tokeni ei leitud. Palun logige sisse.",
+    "invalidToken": "Kehtetu token. Palun logige sisse.",
+    "invalidEmailFormat": "Kehtetu meilivorming",
+    "passwordShort": "Parool peab olema vähemalt 8 tähemärki pikk",
+    "emailExist": "Selle e-posti aadressiga kasutaja on juba olemas",
+    "failedCreate": "Uue kasutaja loomine ebaõnnestus"
+  },
+  "email": {
+    "register": "Registreerimismeil",
+    "recovery": "Parooli taastamine",
+    "delete": "Konto kustutatud"
+  }
 }

@@ -9,8 +9,14 @@
   "validateSuccess": "Sinu e-post oli kontrollitud! Proovi autoriseerida.",
   "validateFail": "E-posti kontroll feilis. Viide on vale või expired.",
   "userList": "Kasutaja list",
-  "addUser": "Lisa kasutaja",
   "myDetails": "Minu konto",
   "logoutMenu": "Logi välja",
-  "loginFailed": "Login failed. Palun valideerri e-post ja parool või kontrolli oma e-post."
+  "loginFailed": "Login failed. Palun valideerri e-post ja parool või kontrolli oma e-post.",
+  "deleteUser": "Kustuta kasutaja",
+  "userData": "Kasutaja andmed",
+  "userLoginHistory": "Kasutaja sisselogimise ajalugu",
+  "previous": "Eelmine",
+  "next": "Järgmine",
+  "paginationInfo": "Lehekülg {{page}} / {{totalPages}}",
+  "addUser": "Lisa kasutaja"
 }

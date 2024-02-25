@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import DeleteUserButton from './DeleteUserButton';
 import instance from '../../config/axiosConfig';
+import { useTranslation } from 'react-i18next';
 
 export interface User {
     id: number;
@@ -17,6 +18,7 @@ interface UserListResponse {
 }
 
 const UserList: React.FC = () => {
+    const { t } = useTranslation();
     const [users, setUsers] = useState<User[]>([]);
     const [page, setPage] = useState<number>(1);
     const [currentId, setCurrentId] = useState<number>(1);
@@ -30,7 +32,6 @@ const UserList: React.FC = () => {
     const fetchUsers = async () => {
         try {
             const response = await instance.get<UserListResponse>(`/users/list?page=${page}`);
-            console.log(response.data);
             setUsers(response.data.users);
             setTotalPages(response.data.totalPages);
             setCurrentId(response.data.userId);
@@ -53,7 +54,7 @@ const UserList: React.FC = () => {
 
     return (
         <div>
-            <h2>User List</h2>
+            <h2>{t('userList')}</h2>
             <ol start={(page - 1) * itemsPerPage + 1}>
                 {users.map((user, index) => (
                     <li key={user.id}>
@@ -63,9 +64,9 @@ const UserList: React.FC = () => {
                 ))}
             </ol>
             <div>
-                <button onClick={handlePreviousPage} disabled={page === 1}>Previous</button>
-                <span>{`Page ${page} of ${totalPages}`}</span>
-                <button onClick={handleNextPage} disabled={page === totalPages}>Next</button>
+                <button onClick={handlePreviousPage} disabled={page === 1}>{t('previous')}</button>
+                <span>{t('paginationInfo', { page: page, totalPages: totalPages })}</span>
+                <button onClick={handleNextPage} disabled={page === totalPages}>{t('next')}</button>
             </div>
         </div>
     );

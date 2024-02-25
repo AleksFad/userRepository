@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import i18n from "../i18n";
+import i18n from '../i18n';
 const jwt = require('jsonwebtoken');
 
 declare global {

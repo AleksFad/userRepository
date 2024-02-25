@@ -25,7 +25,8 @@
     "internalServerError": "Internal Server Error",
     "userAddedSuccessfully": "User added successfully.",
     "userDeletedSuccessfully": "User deleted successfully",
-    "userWithEmailExists": "User with this email already exists"
+    "userWithEmailExists": "User with this email already exists",
+    "fetchIdError": "Error with fetching user"
   },
   "auth": {
     "accessDenied": "Access denied. Please login.",

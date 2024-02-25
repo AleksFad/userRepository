@@ -4,6 +4,7 @@ import { generateNewPassword } from '../utils/passwordGenerator';
 import { EmailService } from '../services/emailService';
 import jwt from 'jsonwebtoken';
 import i18n from '../i18n';
+import { sendErrorResponse } from '../utils/errorHandler';
 
 export class AuthController {
     static async register(req: Request, res: Response): Promise<void> {
@@ -20,7 +21,7 @@ export class AuthController {
             return;
         } catch (error) {
             console.error('Error registering user:', error);
-            res.status(500).json({ error: i18n.t('register.internalServerError') });
+            sendErrorResponse(res, 500, 'register.internalServerError', 'Internal Server Error');
         }
     }
 
@@ -37,7 +38,7 @@ export class AuthController {
             res.status(200).json({ token });
         } catch (error) {
             console.error('Error logging in user:', error);
-            res.status(500).json({ error: i18n.t('login.internalServerError') });
+            sendErrorResponse(res, 500, 'login.internalServerError', 'Internal Server Error');
         }
     }
 
@@ -59,7 +60,7 @@ export class AuthController {
             res.status(200).json({ message: i18n.t('recover.sent') });
         } catch (error) {
             console.error('Error recovering password:', error);
-            res.status(500).json({ error: i18n.t('recover.internal') });
+            sendErrorResponse(res, 500, 'recover.internal', 'Internal Server Error');
         }
     }
 
@@ -80,7 +81,7 @@ export class AuthController {
             res.json({ message: i18n.t('validate.success') });
         } catch (error) {
             console.error('Validation error:', error);
-            res.status(400).json({ error: error });
+            sendErrorResponse(res, 500, 'recover.internal', 'Internal Server Error');
         }
     }
 }
