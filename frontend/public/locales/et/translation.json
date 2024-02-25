@@ -1,0 +1,16 @@
+{
+  "login": "Logi sisse",
+  "email": "E-post",
+  "password": "Parool",
+  "logout": "Login välja",
+  "recover": "Taasta parool",
+  "register": "Registreeri",
+  "validatingEmail": "Kontrollin sinu e-post...",
+  "validateSuccess": "Sinu e-post oli kontrollitud! Proovi autoriseerida.",
+  "validateFail": "E-posti kontroll feilis. Viide on vale või expired.",
+  "userList": "Kasutaja list",
+  "addUser": "Lisa kasutaja",
+  "myDetails": "Minu konto",
+  "logoutMenu": "Logi välja",
+  "loginFailed": "Login failed. Palun valideerri e-post ja parool või kontrolli oma e-post."
+}

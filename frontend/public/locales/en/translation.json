@@ -1,0 +1,16 @@
+{
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "logout": "Logging out...",
+  "recover": "Recover Password",
+  "register": "Register",
+  "validatingEmail": "Validating your email...",
+  "validateSuccess": "Your email has been successfully validated! Now try to login",
+  "validateFail": "Failed to validate your email. The link may have expired or is invalid.",
+  "userList": "User List",
+  "addUser": "Add User",
+  "myDetails": "My details",
+  "logoutMenu": "Logout",
+  "loginFailed": "Login failed. Please check the credentials or confirm your account via email."
+}

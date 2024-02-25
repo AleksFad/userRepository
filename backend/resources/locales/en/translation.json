@@ -1,0 +1,44 @@
+{
+  "login": {
+    "failed": "Login failed. Please check the credentials or confirm your account via email.",
+    "internalServerError": "Internal Server Error"
+  },
+  "register": {
+    "success": "User registered successfully. Please see inbox and confirm your account.",
+    "internalServerError": "Internal Server Error"
+  },
+  "recover":{
+    "notfound": "User not found",
+    "sent": "Password recovery email sent",
+    "internal": "Internal Server Error"
+  },
+  "validate": {
+    "tokenrequired": "Token is required",
+    "success": "User validated successfully",
+    "invalid": "Invalid token"
+  },
+  "user": {
+    "idMissing": "User ID is missing",
+    "userNotFound": "User not found",
+    "userAddedSuccess": "User added successfully.",
+    "userDeletedSuccess": "User deleted successfully",
+    "internalServerError": "Internal Server Error",
+    "userAddedSuccessfully": "User added successfully.",
+    "userDeletedSuccessfully": "User deleted successfully",
+    "userWithEmailExists": "User with this email already exists"
+  },
+  "auth": {
+    "accessDenied": "Access denied. Please login.",
+    "noTokenProvided": "No token provided. Please login.",
+    "invalidToken": "Invalid token. Please login.",
+    "invalidEmailFormat": "Invalid email format",
+    "passwordShort": "Password must be at least 8 characters long",
+    "emailExist": "User with this email already exists",
+    "failedCreate": "Failed to create new user"
+  },
+  "email": {
+    "register": "Registration email",
+    "recovery": "Password Recovery",
+    "delete": "Account deleted"
+  }
+}
