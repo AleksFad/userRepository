@@ -45,3 +45,13 @@ Node + React test assignment
 - `GET /users/detail/:userId` - Retrieves detailed information about a specific user (authentication required).
 - `POST /users/register` - Adds a new user to the system (authentication required).
 - `DELETE /users/delete/:userId` - Deletes a specific user (authentication required).
+
+### Tests
+1. Navigate to backend folder
+   ```bash
+    cd backend
+   ```
+2. Run tests
+   ```bash
+    npm test
+   ```
