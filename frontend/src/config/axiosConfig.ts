@@ -17,7 +17,6 @@ instance.interceptors.request.use((config) => {
 instance.interceptors.response.use(
     response => response,
     error => {
-        console.log(error.response);
         if (error.response && error.response.data.unauthorized) {
             window.dispatchEvent(new CustomEvent('redirectToLogin', {
                 detail: {
