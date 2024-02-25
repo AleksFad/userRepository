@@ -54,10 +54,12 @@
   {
     "id": "399afb8d-7608-4b41-8cb7-48e156f5accc",
     "email": "aleksander@diginetwork.ee",
-    "password": "$2b$10$/C28v8FfmPJn.rI4lsbF.ePdVQgqS2i9pZ2mBnKyWZCAHIak8lKgS",
+    "password": "$2b$10$H3NJqtvY8og7FHLO7Rvn3Oj6/AtgOzdApGQVTfYgzIA4A9hpwppOe",
     "lastLogins": [
       "2024-02-25T13:00:55.831Z",
-      "2024-02-25T13:01:40.276Z"
+      "2024-02-25T13:01:40.276Z",
+      "2024-02-25T13:39:44.085Z",
+      "2024-02-25T13:40:37.749Z"
     ],
     "isValidated": true
   }
