@@ -12,7 +12,7 @@ Node + React test assignment
 ### Frontend and Backend Setup
 
 1. **Navigate to the root Directory**
-2. **Run Install Script Dependencies**
+2. **Run Install Script**
     ```bash
     chmod +x setupAndRun.sh
     ./setupAndRun.sh
