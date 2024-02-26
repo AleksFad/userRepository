@@ -19,7 +19,7 @@ Node + React test assignment
     ```
 
 3. **Review .env in the frontend and the backend**
-    - Please make sure to make your api key from postmark (https://postmarkapp.com/). For now backend env POSTMARK_API_TOKEN and POSTMARK_EMAIL_FROM works only for domains ..@diginetwork.ee
+    - Please make sure to make your api key from postmark (https://postmarkapp.com/).
 
 ## Frontend Routes
 
